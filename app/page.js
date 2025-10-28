@@ -25,8 +25,8 @@ export default function Home() {
 
   // ページが表示された時に1回だけAPI通信を実行する
   useEffect(() => {
-    const lat = '35.6895';
-    const lon = '139.6917';
+    const lat = '33.59';
+    const lon = '130.4017';
     const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m&daily=weather_code,temperature_2m_max,temperature_2m_min,relative_humidity_2m_mean,precipitation_probability_max&timezone=Asia/Tokyo`;
 
     async function fetchWeather() {
@@ -75,13 +75,13 @@ export default function Home() {
                 <div className="@[480px]:p-4">
                   <div
                     className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                    data-alt="A beautiful night view of Tokyo with glowing city lights."
+                    data-alt="A beautiful night view of Fukuoka with glowing city lights."
                     style={{ // styleの書き換え
-                      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBc3RHACzbooXd8xx0TOWJ2f3yyw-S8lmbKMXVQdYF31JACvvwFtgA-twN7lut6e0uCk5jHtObiAzBgDMpEiKPVNeQ39R-vVywETLEjdHc2JoSfDK6_HOp8QsYeQLQxNbrNJ02EbTpbF55VFA9J4t7tiKwKVu-lJTqHmC2iBzoBSayMoUlcUctmA3wVKNRv8iT4gLcJuUhxg54iipth1Aw-Zv74kB4KtuxlbACxIWz_0EWtoiz634kVboawmlyUMFAhhE9j6J5sA")'
+                      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://showcase.city.fukuoka.lg.jp/admn/mrgt/images/2021/06/img1399.jpg")'
                     }}
                   >
                     <div className="flex flex-col gap-2 text-center">
-                      <h1 className="text-white text-5xl font-black leading-tight tracking-[-0.033em] @[480px]:text-7xl">Tokyo</h1>
+                      <h1 className="text-white text-5xl font-black leading-tight tracking-[-0.033em] @[480px]:text-7xl">Fukuoka</h1>
                       {/* データを埋め込む */}
                       <h2 id="current-temp" className="text-white text-lg font-normal leading-normal @[480px]:text-xl">
                         {Math.round(currentWeather.temperature_2m)}°C
