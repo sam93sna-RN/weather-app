@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "東京 天気予報 (Open-Meteo)",
+  title: "福岡 天気予報 (Open-Meteo)",
   description: "Next.jsで作成した天気予報アプリ",
 };
 

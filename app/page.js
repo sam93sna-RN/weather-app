@@ -81,7 +81,7 @@ export default function Home() {
                     }}
                   >
                     <div className="flex flex-col gap-2 text-center">
-                      <h1 className="text-white text-5xl font-black leading-tight tracking-[-0.033em] @[480px]:text-7xl">Fukuoka</h1>
+                      <h1 className="text-white text-5xl font-black leading-tight tracking-[-0.033em] @[480px]:text-7xl">福岡</h1>
                       {/* データを埋め込む */}
                       <h2 id="current-temp" className="text-white text-lg font-normal leading-normal @[480px]:text-xl">
                         {Math.round(currentWeather.temperature_2m)}°C
