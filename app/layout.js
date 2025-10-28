@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "福岡天気予報 ",
+  title: "神奈川天気予報",
   description: "Next.jsで作成した天気予報アプリ",
 };
 
@@ -20,7 +20,6 @@ export default function RootLayout({ children }) {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
-      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       
       {/* bodyタグにカスタムフォント(font-display)と
         カスタム背景色(bg-background-dark)を適用 

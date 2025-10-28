@@ -25,8 +25,8 @@ export default function Home() {
 
   // ページが表示された時に1回だけAPI通信を実行する
   useEffect(() => {
-    const lat = '33.59';
-    const lon = '130.4017';
+    const lat = '35.466';
+    const lon = '139.622';
     const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m&daily=weather_code,temperature_2m_max,temperature_2m_min,relative_humidity_2m_mean,precipitation_probability_max&timezone=Asia/Tokyo`;
 
     async function fetchWeather() {
@@ -77,11 +77,11 @@ export default function Home() {
                     className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
                     data-alt="A beautiful night view of Fukuoka with glowing city lights."
                     style={{ // styleの書き換え
-                      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://showcase.city.fukuoka.lg.jp/admn/mrgt/images/2021/06/img1399.jpg")'
+                      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://www.yokohama-landmark.jp/skygarden/img/sg_top_main_sp.jpg")'
                     }}
                   >
                     <div className="flex flex-col gap-2 text-center">
-                      <h1 className="text-white text-5xl font-black leading-tight tracking-[-0.033em] @[480px]:text-7xl">福岡</h1>
+                      <h1 className="text-white text-5xl font-black leading-tight tracking-[-0.033em] @[480px]:text-7xl">神奈川</h1>
                       {/* データを埋め込む */}
                       <h2 id="current-temp" className="text-white text-lg font-normal leading-normal @[480px]:text-xl">
                         {Math.round(currentWeather.temperature_2m)}°C
