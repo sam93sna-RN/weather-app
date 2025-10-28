@@ -12,14 +12,15 @@ export default function RootLayout({ children }) {
   return (
     // htmlタグに "dark" クラスを適用
     <html lang="ja" className="dark">
-      <head>
-        {/* ハイドレーションエラーを避けるため、コメントは削除 */}
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-      </head>
+      {/*
+        Next.js App Routerでは <head> タグは自動的に管理されるため、手動で追加するとビルドエラーの原因になります。
+        <link> タグなどは <html> の直下に配置することで、Next.jsが適切に <head> 内に展開します。
+      */}
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       
       {/* bodyタグにカスタムフォント(font-display)と
         カスタム背景色(bg-background-dark)を適用 
